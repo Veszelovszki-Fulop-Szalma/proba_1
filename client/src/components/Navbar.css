@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: 1;
+  background-color: blue;
+}
+
+img {
+  width: 50px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
