@@ -4,25 +4,7 @@ import Home from "./pages/Home/Home";
 import Kotveny from "./pages/Kotveny/Kotveny";
 import Kripto from "./pages/Kripto/Kripto";
 import Reszveny from "./pages/Reszveny/Reszveny";
-
-// const router = createBrowserRouter([
-//   {
-//     path: "/",
-//     element: <Home />,
-//   },
-//   {
-//     path: "/kotveny",
-//     element: <Kotveny />,
-//   },
-//   {
-//     path: "/reszveny",
-//     element: <Reszveny />,
-//   },
-//   {
-//     path: "/kripto",
-//     element: <Kripto />,
-//   },
-// ]);
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -32,7 +14,10 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/kotveny" element={<Kotveny />} />
+          <Route path="/Kripto" element={<Kripto />} />
+          <Route path="/Reszveny" element={<Reszveny />} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </div>
   );

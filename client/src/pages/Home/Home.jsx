@@ -4,22 +4,12 @@ import "./Home.css";
 const Home = () => {
   return (
     <div>
-      <h1>Pénzügy</h1>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati
-        commodi cumque, error facilis voluptas ut ab odit suscipit id sapiente
-        et unde, doloremque cum, nihil iure sint fugiat temporibus dolor! Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Asperiores
-        consequatur velit ratione, iusto odio sit aspernatur adipisci ducimus id
-        similique. Neque fugit, alias ipsam sit natus quos illo dolores fuga?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id architecto
-        odio, illum alias mollitia hic natus similique cumque excepturi,
-        quisquam modi, distinctio nam et atque dolore autem culpa dolorem quo!
+      <div className="fejlec"/>
+      <h1>Pénzügy</h1> 
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores alias suscipit placeat et eveniet facilis quam iure! Commodi sapiente, cumque, laborum laudantium dolore dolorum placeat, voluptatum aperiam ex ullam maiores.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium accusamus saepe quasi cumque, reiciendis error? Repellendus, repellat deserunt reprehenderit nemo voluptates animi ea sit illum sequi autem amet voluptate similique!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit tenetur est velit illum numquam repudiandae omnis placeat obcaecati officiis totam accusamus corporis dolor ratione, enim voluptatem magnam! Dolorem, assumenda blanditiis.
       </p>
-    <form>
-        <input type="text" />
-    </form>
-
     </div>
   );
 };

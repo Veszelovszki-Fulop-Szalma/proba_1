@@ -1,16 +1,22 @@
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex: 1;
-  background-color: lightblue;
+.navbar {
+  height: 80px;
 }
 
-img {
-  width: 50px;
+.wrapper {
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: darkblue;
 }
 
 a {
   color: white;
   text-decoration: none;
+  margin: 10px;
+  font-size: 25px;
+}
+
+.logo{
+  font-size: 45px;
 }
