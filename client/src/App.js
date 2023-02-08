@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Header from "./components/Header";
 import Home from "./pages/Home/Home";
+
 import Kotveny from "./pages/Kotveny/Kotveny";
 import Kripto from "./pages/Kripto/Kripto";
 import Reszveny from "./pages/Reszveny/Reszveny";
@@ -13,7 +13,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Navbar/>
-        <Header/>
+        
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/kotveny" element={<Kotveny />} />

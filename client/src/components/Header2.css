@@ -1,0 +1,10 @@
+.fejlec2{
+    height: 100vh;
+    min-height: 500px;
+    background-image: url("C:\Users\Richárd\Desktop\Projekt\proba\proba\client\src\img\bank3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center, center;
+    color: white;
+  }
+  
