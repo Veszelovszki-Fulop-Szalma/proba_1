@@ -5,6 +5,7 @@ import Kotveny from "./pages/Kotveny/Kotveny";
 import Kripto from "./pages/Kripto/Kripto";
 import Reszveny from "./pages/Reszveny/Reszveny";
 import Footer from "./components/Footer";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (

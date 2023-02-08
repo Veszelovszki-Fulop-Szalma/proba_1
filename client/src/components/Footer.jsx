@@ -1,11 +1,11 @@
 import React from "react";
-import "./Footer.css";
+
 
 const Footer = () => {
   return (
 
-    <footer>
-    <div>
+    <footer class="py-4 bg-dark text-white-50">
+    <div class="text-center">
         <small>
       AssistedPro <br />
       6722 Szeged <br />
@@ -18,3 +18,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
