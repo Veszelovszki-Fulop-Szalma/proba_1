@@ -6,9 +6,6 @@ import kep from "../img/bank.png"
 const Header = () => {
   return (
     <div className="container">
-      <div className="logo">
-      </div>
-      <Navbar />
       
     </div>
   );

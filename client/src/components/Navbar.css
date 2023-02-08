@@ -1,22 +1,45 @@
-.navbar {
-  height: 80px;
+.Navbar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  padding: 0 20px;
 }
 
 .wrapper {
-  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.left {
+  padding-top: 12px;
+  display: flex;
+}
+
+.left a {
+  color: black;
+  text-decoration: none;
+  margin-right: 20px;
+  padding: 10px;
+}
+
+.right {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background-color: darkblue;
 }
 
-a {
-  color: white;
+.logo {
+  color: black;
+  font-size: 40px;
+  font-weight: bold;
   text-decoration: none;
-  margin: 10px;
-  font-size: 25px;
+  margin-right: 20px;
 }
 
-.logo{
-  font-size: 45px;
-}
