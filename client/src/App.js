@@ -21,7 +21,7 @@ function App() {
           <Route path="/Kripto" element={<Kripto />} />
           <Route path="/Reszveny" element={<Reszveny />} />
           <Route path="/Belepes" element={<Belepes />} />
-          
+
         </Routes>
         <Footer/>
       </BrowserRouter>

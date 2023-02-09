@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div className="Navbar">
+      
        <div className="wrapper">
        <div className="right">
       <Link to="/" className="logo">AssistedPro</Link>
