@@ -9,7 +9,7 @@
 .kep1{
   height: 100vh;
   min-height: 500px;
-  background-image: url("C:\Users\Richárd\Desktop\Projekt\proba\proba\client\src\img\kep1.jpg");
+  background-image: url("./kep1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center, center;
