@@ -4,6 +4,7 @@ import kep1 from "../img/pics2.png"
 import kep2 from "../img/pics3.png"
 import kep3 from "../img/pics4.png"
 
+
 function Card({ imageSrc }) {
   return (
     <div className="card col-sm-12 col-md-6">

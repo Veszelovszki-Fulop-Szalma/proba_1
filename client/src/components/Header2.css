@@ -1,7 +1,7 @@
 .fejlec2{
     height: 100vh;
     min-height: 500px;
-    background-image: url("/client/src/img/bank2.png");
+    background-image: url("../img/bank2.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center, center;

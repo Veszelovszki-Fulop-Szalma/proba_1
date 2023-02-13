@@ -1,0 +1,11 @@
+.row{
+    padding-bottom: 5%;
+}
+.card
+{
+    position:none;
+}
+.row>*{
+    padding-left: 0px;
+    padding-right: 0px;
+}
