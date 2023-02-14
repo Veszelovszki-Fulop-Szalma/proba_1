@@ -3,7 +3,7 @@
 }
 .card
 {
-    position:none;
+    /* position:none; */
 }
 .row>*{
     padding-left: 0px;

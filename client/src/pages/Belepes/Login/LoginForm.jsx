@@ -1,14 +1,20 @@
-import React, { useState } from 'react';
-import './LoginForm.css';
+import React, { useState } from "react";
+import "./LoginForm.css";
 
 const LoginForm = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    console.log(username, password);
+    if (username && password) {
+      setIsLoggedIn(true);
+      localStorage.setItem("isLoggedIn", isLoggedIn);
+    }
+    console.log(localStorage.getItem("isLoggedIn"));
   };
-
 
   return (
     <form onSubmit={handleSubmit}>

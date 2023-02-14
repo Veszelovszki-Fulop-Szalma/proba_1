@@ -1,12 +1,8 @@
-.container{
-  margin-left: 40%;
-  margin-right: 40%;
-  
+.container {
   padding-top: 71px;
-  
 }
 
-.kep1{
+.kep1 {
   height: 100vh;
   min-height: 500px;
   background-image: url("./kep1.jpg");
@@ -23,7 +19,7 @@
   margin-bottom: 2%;
 }
 
-h1{
+h1 {
   font-size: 9em;
   font-weight: 300;
   padding: 5px;
@@ -50,3 +46,6 @@ h1{
   line-height: 170%;
 }
 
+.card {
+  position: absolute;
+}
