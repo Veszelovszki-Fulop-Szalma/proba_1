@@ -7,7 +7,9 @@ const Kotveny = () => {
     <Header2/>
     <div className="container">
     <div className="sorkikot">
-      <h1>Kötvények</h1>
+      <div className="kek-hatter">
+        <h1>Kötvények</h1>
+      </div>
         <p>
         A kötvények olyan pénzügyi eszközök, amelyek segítségével a befektetők kis mértékű, általában biztonságos hozamot érhetnek el. Az átlagos hozam 4-5% körül mozog, ami alacsonyabb lehet a részvényekkel szemben, de nincs annyi kockázat. Ugyanakkor, ha a kibocsátó vállalat anyagi nehézségekbe kerül, akkor a kötvények értéke csökkenhet, és a befektetőknek kockázatot jelenthetnek. Ezenkívül, a kamatok változása miatt a hozam is változhat.
 
@@ -15,12 +17,14 @@ const Kotveny = () => {
         </p>
     </div>
     <div className="kepkot"/>
-    <h2>
-    Kötvenyek fajtái
-    </h2>
-  
 
-  </div>
+    <div className="kek-hatter">
+        <h2>
+          Kötvenyek fajtái
+        </h2>
+    </div>
+    <div className="kepkotfaj"/>
+    </div>
   </div>;
 };
 

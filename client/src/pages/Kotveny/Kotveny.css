@@ -6,13 +6,23 @@
   }
 
 .kepkot{
-    height: auto;
-    max-width: 100%;
+    height: 200vh;
+    max-height: 1000px;
     background-image: url("./kotveny.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center, center;
     color: white;
+}
+
+.kepkotfaj{
+  height: 200vh;
+  max-height: 1000px;
+  background-image: url("./kotvenyfaj.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center, center;
+  color: white;
 }
 
 .sorkikot {
@@ -34,4 +44,12 @@
     line-height: 1.5;
     hyphens: auto;
     line-height: 170%;
+  }
+
+  .kek-hatter
+  {
+  background-color: rgb(0, 47, 255);
+  padding: 2%;
+  margin-top: 7%;
+  margin-bottom: 2%;
   }
