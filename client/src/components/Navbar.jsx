@@ -6,9 +6,11 @@ const Navbar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   const isl = localStorage.getItem("isLoggedIn");
   console.log(isl);
-  // if (isl) {
-  // setIsLoggedIn(isl);
-  // }
+  console.log(setIsLoggedIn);
+  //if (isl) {
+    //setIsLoggedIn(isl);
+  //}
+
   return (
     <div className="Navbar">
       <div className="wrapper">
