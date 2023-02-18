@@ -7,10 +7,11 @@ const Reszveny = () => {
   return <div>
     <Header4/>
     <div className="container">
-      <h1>Részvények</h1>
+      <div className="szurke-hatter">
+      <h1>Részvények</h1></div>
       <div className="sorki">
     <p>Az értékpapírok, mint például a részvények, a befektetők számára lehetőséget nyújthatnak a pénzük növelésére, azonban egyúttal kockázatot is jelentenek. Az átlagos hozamot illetően, az évtizedek alatt kialakult átlag az, hogy az amerikai tőzsdéken jegyzett részvények átlagosan évente 8-10% hozamot produkálnak.</p>
-
+    <div className="kep"></div>
 <p><h3>A részvények vásárlása érdemes lehet, ha:</h3>
 <ul>
 <li>Hosszú távú befektetési céljaid vannak</li>
@@ -25,6 +26,7 @@ const Reszveny = () => {
 <li>Félsz a rövid távú piaci ingadozásoktól</li>
 </ul></p>
 <p>A részvények befektetése növekedési lehetőségekkel és kockázatokkal jár együtt, ezért fontos alaposan megismerni a vállalatokat, amelyeknek a részvényeit vásárolod, valamint figyelembe venni a befektetési céljaidat és a tolerált kockázatot.</p>
+<div className="kep2"></div>
     </div>
     </div>
     </div>

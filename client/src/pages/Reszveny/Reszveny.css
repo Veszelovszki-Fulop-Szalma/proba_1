@@ -1,11 +1,29 @@
 .container {
   padding-top: 71px;
+  padding-bottom: 10%;
+}
+.kep {
+  height: 50vh;
+  min-height: 300px;
+  background-image: url("./reszveny1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center, center;
+  color: white;
+}
+.kep2 {
+  height: 500px;
+  
+  background-image: url("./reszveny2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center, center;
+  color: white;
 }
 
 
-
 .szurke-hatter {
-  background-color: rgb(236, 236, 236);
+background-color: rgb(47, 79, 218);
   padding: 2%;
   margin-top: 7%;
   margin-bottom: 2%;
@@ -24,7 +42,7 @@ h1 {
   overflow: hidden;
   text-align: justify;
   text-justify: inter-word;
-  padding-bottom: 18%;
+  padding-bottom: 80%;
 }
 
 .sorki p {
