@@ -16,7 +16,8 @@ const Home = () => {
     <div>
       <Header />
       <div className="container">
-        <h1>Rólunk</h1>
+        <div className="szurke-hatter"> <h1>Rólunk</h1> </div>
+        
         <div className="sorki">
           <p>
             Az AssistedPro az első német vagyoni tanácsadó vállalatok egyike,

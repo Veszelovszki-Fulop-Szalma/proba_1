@@ -6,7 +6,7 @@ const Kotveny = () => {
   return <div>
     <Header2/>
     <div className="container">
-      <div className="kek-hatter">
+      <div className="szurke-hatter">
         <h1>Kötvények</h1>
       </div>
       <div className="sorkikot">
@@ -18,7 +18,7 @@ const Kotveny = () => {
       </div>
     <div className="kepkot"/>
 
-    <div className="kek-hatter">
+    <div className="szurke-hatter">
         <h2>
           Kötvenyek fajtái
         </h2>
