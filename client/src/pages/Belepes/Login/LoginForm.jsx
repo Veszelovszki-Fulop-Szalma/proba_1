@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./LoginForm.css";
+import { Link } from "react-router-dom";
 
 const LoginForm = () => {
   const [username, setUsername] = useState("");
@@ -40,7 +41,7 @@ const LoginForm = () => {
       <button type="submit">Belépés</button>
       <br />
       <br />
-      <a href="/register">Regisztráció</a>
+      <Link to="/Regis">Regisztráció</Link>
     </form>
   );
 };

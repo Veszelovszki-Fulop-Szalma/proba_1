@@ -7,6 +7,7 @@ import Reszveny from "./pages/Reszveny/Reszveny";
 import Footer from "./components/Footer";
 
 import Belepes from "./pages/Belepes/Belepes";
+import Regis from "./pages/Regis/Regis";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 
@@ -15,17 +16,18 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <Navbar/>
-        
+        <Navbar />
+
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/kotveny" element={<Kotveny />} />
           <Route path="/Kripto" element={<Kripto />} />
           <Route path="/Reszveny" element={<Reszveny />} />
           <Route path="/Belepes" element={<Belepes />} />
+          <Route path="/Regis" element={<Regis />} />
 
         </Routes>
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     </div>
   );
