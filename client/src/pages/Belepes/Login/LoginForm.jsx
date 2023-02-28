@@ -1,24 +1,29 @@
 import React, { useState } from "react";
 import "./LoginForm.css";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { loginData, valt } from "../../../redux/userSlice";
 
 const LoginForm = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const userValue = useSelector((state) => state.user.userValue);
+  const dispatch = useDispatch();
 
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(username, password);
     if (username && password) {
-      setIsLoggedIn(true);
-      localStorage.setItem("isLoggedIn", isLoggedIn);
+      dispatch(loginData({ username: username, password: password }));
+      dispatch(valt());
+      console.log("Felh" + userValue.username);
     }
-    console.log(localStorage.getItem("isLoggedIn"));
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form>
       <h1>Belépés</h1>
       <div>
         <label htmlFor="username">Felhasználónév:</label>
@@ -38,7 +43,9 @@ const LoginForm = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
-      <button type="submit">Belépés</button>
+      <button type="submit" onClick={handleSubmit}>
+        Belépés
+      </button>
       <br />
       <br />
       <Link to="/Regis">Regisztráció</Link>

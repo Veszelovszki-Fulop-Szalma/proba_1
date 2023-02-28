@@ -8,7 +8,7 @@ const Navbar = () => {
   console.log(isl);
   console.log(setIsLoggedIn);
   //if (isl) {
-    //setIsLoggedIn(isl);
+  //setIsLoggedIn(isl);
   //}
 
   return (
@@ -21,7 +21,7 @@ const Navbar = () => {
         </div>
         <div className="left">
           <Link to="/">Home</Link>
-          <Link to="/Kotveny">Kötveny</Link>
+          <Link to="/Kotveny">Kötvény</Link>
           <Link to="/Reszveny">Részvény</Link>
           <Link to="/Kripto">Kripto</Link>
           {isLoggedIn ? <Link to="/Portfolio">Portfoliók</Link> : <div></div>}

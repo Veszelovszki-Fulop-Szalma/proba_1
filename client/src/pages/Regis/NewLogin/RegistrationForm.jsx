@@ -14,13 +14,33 @@ function RegistrationForm() {
       alert("A jelszavak nem egyeznek meg!");
       return;
     }
+
+    function feltolt() {
+      const datab = async () => {
+        const bodyParsed = { username, email, password, passwordConfirm };
+        const response = await fetch("http://localhost:3500", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(bodyParsed),
+        });
+
+        console.log(response);
+      };
+
+      datab();
+    }
+
+    feltolt();
+
     console.log(
       `Felhasználónév: ${username}, E-mail: ${email}, Jelszó: ${password}`
     );
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form>
       <div>
         <h1>Regisztráció</h1>
         <label htmlFor="username">Felhasználónév:</label>
@@ -58,7 +78,7 @@ function RegistrationForm() {
           onChange={(event) => setPasswordConfirm(event.target.value)}
         />
       </div>
-      <button type="submit">Regisztráció</button>
+      <button type="submit" onClick={handleSubmit}>Regisztráció</button>
       <br />
       <br />
       <Link to="/Belepes">Belépés</Link>
