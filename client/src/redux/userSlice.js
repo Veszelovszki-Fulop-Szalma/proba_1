@@ -1,25 +1,25 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  userValue: {
-    username: "",
-    password: "",
-    isLoggedIn: true,
-  },
+    userValue: {
+        username: '',
+        password: '',
+        isLoggedIn: false,
+    },
 };
 
 export const userSlice = createSlice({
-  name: "user",
-  initialState,
-  reducers: {
-    loginData: (state, action) => {
-      state.userValue.username = action.username;
-      state.userValue.password = action.password;
+    name: 'user',
+    initialState,
+    reducers: {
+        loginData: (state, action) => {
+            state.userValue.username = action.payload.username;
+            state.userValue.password = action.payload.password;
+        },
+        valt: (state) => {
+            state.userValue.isLoggedIn = !state.userValue.isLoggedIn;
+        },
     },
-    valt: (state) => {
-      state.userValue.isLoggedIn = !state.userValue.isLoggedIn;
-    },
-  },
 });
 
 // Action creators are generated for each case reducer function
