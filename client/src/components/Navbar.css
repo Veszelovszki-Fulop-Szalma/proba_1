@@ -65,3 +65,7 @@ button {
   margin: 10px;
   padding: 10px;
 }
+
+button, input, optgroup, select, textarea {
+  font-size: 16px;
+}
