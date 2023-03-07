@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Router } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home/Home";
 import Kotveny from "./pages/Kotveny/Kotveny";
@@ -10,6 +10,7 @@ import Belepes from "./pages/Belepes/Belepes";
 import Regis from "./pages/Regis/Regis";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
+import ScrollToTop from "./components/ScrollToTop";
 
 
 function App() {
@@ -17,8 +18,9 @@ function App() {
     <div>
       <BrowserRouter>
         <Navbar />
-
+        <ScrollToTop/>
         <Routes>
+        
           <Route path="/" exact element={<Home />} />
           <Route path="/kotveny" element={<Kotveny />} />
           <Route path="/Kripto" element={<Kripto />} />
