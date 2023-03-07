@@ -5,7 +5,7 @@
 
 .kepkot{
     height: 200vh;
-    max-height: 1000px;
+    max-height: 900px;
     background-image: url("./kotveny.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -15,7 +15,7 @@
 
 .kepkotfaj{
   height: 200vh;
-  max-height: 1000px;
+  max-height: 900px;
   background-image: url("./kotvenyfaj.png");
   background-repeat: no-repeat;
   background-size: cover;
