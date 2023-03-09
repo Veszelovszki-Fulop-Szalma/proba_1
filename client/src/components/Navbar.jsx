@@ -32,7 +32,7 @@ const Navbar = () => {
                         <>
                             <Link to="/Portfolio">Portfoliók</Link>
                             <p className="igen">|</p>
-                            <button onClick={handleLogout}>Kilépés</button>
+                            <button onClick={handleLogout} style={{fontSize: '16px'}}>Kilépés</button>
                         </>
                     ) : (
                         <>

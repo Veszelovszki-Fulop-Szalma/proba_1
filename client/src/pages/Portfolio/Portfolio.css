@@ -1,0 +1,37 @@
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  padding-top: 6%;
+}
+
+.portfolio-item {
+  background-color: rgb(188, 199, 251);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.portfolio-item img {
+  display: block;
+  margin: 0 auto 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+.portfolio-item-info h3 {
+  margin-top: 0;
+}
+
+.portfolio-item-info p {
+  margin-bottom: 10px;
+}
+
+.portfolio-item-info a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
