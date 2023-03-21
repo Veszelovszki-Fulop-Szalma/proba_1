@@ -1,5 +1,6 @@
 import React from "react";
-import "./Portfolio.css"
+import "./Portfolio.css";
+import kep from "../Portfolio/portre.jpg"
 
 const Portfolio = () => {
    const portfolioItems = [
@@ -8,7 +9,7 @@ const Portfolio = () => {
        title: "ÚJ TEKNOLOGIA ESZKÖZALAP",
        description: "100% Kripo alapok",
        result: "Várható hozam(éves): 7,47 %",
-       image: "portre.jpg",
+       image: kep,
        url: "",
      },
      {
@@ -16,7 +17,7 @@ const Portfolio = () => {
        title: "FEJLETT VILÁG RÉSZVÉNY ESZKÖZALAP",
        description: "100% Részvény alapok",
        result: "Várható hozam(éves): 4,22 %",
-       image: "https://picsum.photos/201",
+       image: kep,
        url: "",
      },
      {
@@ -24,7 +25,7 @@ const Portfolio = () => {
        title: "VILÁGJÁRÓ KÖTVÉNY ESZKÖZALAP",
        description: "100% kötvény alapok",
        result: "Várható hozam(éves): 4,98 %",
-       image: "https://picsum.photos/202",
+       image: kep,
        url: "",
      },
      {
@@ -32,7 +33,7 @@ const Portfolio = () => {
        title: "GLOBÁLIS ALAPOK ALAPJA",
        description: "40% Részvény, 30% Kripto, 30% Kötvény",
        result: "Várható hozam(éves): 9,22%",
-       image: "https://picsum.photos/203",
+       image: kep,
        url: "",
      },
      {
@@ -40,7 +41,7 @@ const Portfolio = () => {
        title: "FEJLETT VILÁG RÉSZVÉNY ESZKÖZALAP",
        description: "60% Kripto, 20% Részvény, 20% Kötvény",
        result: "Várható hozam(éves): 5,08%",
-       image: "https://picsum.photos/204",
+       image: kep,
        url: "",
      },
    ];
