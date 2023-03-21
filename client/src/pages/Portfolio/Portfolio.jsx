@@ -5,44 +5,42 @@ const Portfolio = () => {
    const portfolioItems = [
      {
        id: 1,
-       title: "Portfolió 1",
-       description: "Leírás 1",
-       image: "https://picsum.photos/200",
+       title: "ÚJ TEKNOLOGIA ESZKÖZALAP",
+       description: "100% Kripo alapok",
+       result: "Várható hozam(éves): 7,47 %",
+       image: "portre.jpg",
        url: "",
      },
      {
        id: 2,
-       title: "Portfolió 2",
-       description: "Leírás 2",
-       image: "https://picsum.photos/200",
+       title: "FEJLETT VILÁG RÉSZVÉNY ESZKÖZALAP",
+       description: "100% Részvény alapok",
+       result: "Várható hozam(éves): 4,22 %",
+       image: "https://picsum.photos/201",
        url: "",
      },
      {
        id: 3,
-       title: "Portfolió 3",
-       description: "Leírás 3",
-       image: "https://picsum.photos/200",
+       title: "VILÁGJÁRÓ KÖTVÉNY ESZKÖZALAP",
+       description: "100% kötvény alapok",
+       result: "Várható hozam(éves): 4,98 %",
+       image: "https://picsum.photos/202",
        url: "",
      },
      {
        id: 4,
-       title: "Portfolió 4",
-       description: "Leírás 4",
-       image: "https://picsum.photos/200",
+       title: "GLOBÁLIS ALAPOK ALAPJA",
+       description: "40% Részvény, 30% Kripto, 30% Kötvény",
+       result: "Várható hozam(éves): 9,22%",
+       image: "https://picsum.photos/203",
        url: "",
      },
      {
        id: 5,
-       title: "Portfolió 5",
-       description: "Leírás 5",
-       image: "https://picsum.photos/200",
-       url: "",
-     },
-     {
-       id: 6,
-       title: "Portfolió 6",
-       description: "Leírás 6",
-       image: "https://picsum.photos/200",
+       title: "FEJLETT VILÁG RÉSZVÉNY ESZKÖZALAP",
+       description: "60% Kripto, 20% Részvény, 20% Kötvény",
+       result: "Várható hozam(éves): 5,08%",
+       image: "https://picsum.photos/204",
        url: "",
      },
    ];
@@ -55,7 +53,8 @@ const Portfolio = () => {
           <div className="portfolio-item-info">
             <h3>{item.title}</h3>
             <p>{item.description}</p>
-            <a href={item.url}>További információ</a>
+            <p>{item.result}</p>
+            <a href={item.url}>Ajánlat Kiválasztása</a>
           </div>
         </div>
       ))}
