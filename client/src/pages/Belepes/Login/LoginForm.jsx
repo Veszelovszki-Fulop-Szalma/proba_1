@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './LoginForm.css';
 import { Link } from 'react-router-dom';
@@ -8,46 +8,60 @@ import { loginData, valt } from '../../../redux/userSlice';
 const LoginForm = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [data, setData] = useState([]);
     const navigate = useNavigate();
-
-    useEffect(() => {
-        const adatleker = async () => {
-            try {
-                const response = await fetch('http://localhost:3500');
-                const adat = await response.json();
-                setData(adat.adatok);
-                // console.log(adat);
-            } catch (error) {
-                console.log(error);
-            }
-        };
-
-        adatleker();
-    }, []);
 
     // const userValue = useSelector((state) => state.user.userValue);
     const dispatch = useDispatch();
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // console.log(username, password);
+
         if (username && password) {
-            let vanE = false;
-            data.forEach((elem) => {
-                if (elem.username === username && elem.password === password) {
-                    vanE = true;
-                }
-            });
-            if (vanE) {
-                console.log('Sikeres');
-                dispatch(valt());
-                dispatch(loginData({ username: username, password: password }));
-                navigate('/');
-            } else {
-                console.log('Sikertelen');
-                navigate('/Belepes');
+            function feltolt() {
+                const datab = async () => {
+                    const bodyParsed = {
+                        username,
+                        password,
+                    };
+                    const response = await fetch(
+                        'http://localhost:3500/user/login',
+                        {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(bodyParsed),
+                        }
+                    );
+                    const adat = await response.json();
+
+                    if (response.ok) {
+                        window.alert('Sikeresen bejelentkeztél!');
+                        if (username === 'admin') {
+                            localStorage.setItem('username', username);
+                            localStorage.setItem('isLoggedIn', true);
+                            dispatch(loginData({ username }));
+                            dispatch(valt());
+                            window.location.replace('http://localhost:3500/');
+                        } else {
+                            localStorage.setItem('username', username);
+                            localStorage.setItem('isLoggedIn', true);
+                            dispatch(loginData({ username }));
+                            dispatch(valt());
+                            navigate('/');
+                        }
+                    } else {
+                        window.alert(adat.msg);
+                        navigate('/Regis');
+                    }
+                };
+
+                datab();
             }
+
+            feltolt();
+        } else {
+            window.alert('Minden mezőt ki kell tölteni!');
         }
     };
 

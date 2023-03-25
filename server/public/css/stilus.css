@@ -1,0 +1,12 @@
+body {
+    background-color: lightcyan;
+}
+
+.formok {
+    display: flex;
+    justify-content: space-between;
+}
+
+#form-modosit {
+    display: none;
+}

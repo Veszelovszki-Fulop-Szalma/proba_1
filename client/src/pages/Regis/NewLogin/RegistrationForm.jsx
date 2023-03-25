@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './RegistrationForm.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -9,24 +9,8 @@ function RegistrationForm() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [passwordConfirm, setPasswordConfirm] = useState('');
-    const [data, setData] = useState([]);
     const navigate = useNavigate();
     const dispatch = useDispatch();
-
-    useEffect(() => {
-        const adatleker = async () => {
-            try {
-                const response = await fetch('http://localhost:3500');
-                const adat = await response.json();
-                setData(adat.adatok);
-                // console.log(adat);
-            } catch (error) {
-                console.log(error);
-            }
-        };
-
-        adatleker();
-    }, []);
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -35,51 +19,47 @@ function RegistrationForm() {
             return;
         }
 
-        if (username && email && password) {
-            let vanE = false;
-            data.forEach((elem) => {
-                if (elem.username === username && elem.password === password) {
-                    vanE = true;
-                }
-            });
-            if (vanE) {
-                window.alert('Ezekkel az infokkal már létezik felhasználó!');
-                return;
-            } else {
-                console.log('Sikeres');
-                dispatch(valt());
-                dispatch(loginData({ username: username, password: password }));
-                navigate('/');
-            }
-        }
+        if ((username, email, password)) {
+            function feltolt() {
+                const datab = async () => {
+                    const bodyParsed = {
+                        username,
+                        email,
+                        password,
+                        passwordConfirm,
+                    };
+                    const response = await fetch(
+                        'http://localhost:3500/user/register',
+                        {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(bodyParsed),
+                        }
+                    );
+                    const adat = await response.json();
 
-        function feltolt() {
-            const datab = async () => {
-                const bodyParsed = {
-                    username,
-                    email,
-                    password,
-                    passwordConfirm,
+                    if (response.ok) {
+                        window.alert('Sikeres regisztráció!');
+                        localStorage.setItem('username', username);
+                        localStorage.setItem('isLoggedIn', true);
+                        dispatch(loginData({ username }));
+                        dispatch(valt());
+                        navigate('/');
+                    } else {
+                        window.alert(adat.msg);
+                        navigate('/Regis');
+                    }
                 };
-                const response = await fetch('http://localhost:3500', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(bodyParsed),
-                });
 
-                console.log(response);
-            };
+                datab();
+            }
 
-            datab();
+            feltolt();
+        } else {
+            window.alert('Minden mezőt ki kell tölteni!');
         }
-
-        feltolt();
-
-        console.log(
-            `Felhasználónév: ${username}, E-mail: ${email}, Jelszó: ${password}`
-        );
     };
 
     return (

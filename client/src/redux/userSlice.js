@@ -3,7 +3,6 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
     userValue: {
         username: '',
-        password: '',
         isLoggedIn: false,
     },
 };
@@ -14,7 +13,6 @@ export const userSlice = createSlice({
     reducers: {
         loginData: (state, action) => {
             state.userValue.username = action.payload.username;
-            state.userValue.password = action.payload.password;
         },
         valt: (state) => {
             state.userValue.isLoggedIn = !state.userValue.isLoggedIn;

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/stilus.css" />
+        <title>Portfolio</title>
+    </head>
+    <body>
+        <nav>
+            <li><a href="/">Admin</a></li>
+            <li><a href="/user">User</a></li>
+            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/agent">Ügynök</a></li>
+            <li><a href="/cart">Kosár</a></li>
+        </nav>
+        <div class="formok">
+            <div class="form">
+                <h1>Portfóliók feltöltése</h1>
+                <form>
+                    <label for="title">Title:</label>
+                    <input type="text" name="title" id="title" /><br />
+                    <label for="description">Description:</label>
+                    <input
+                        type="text"
+                        name="description"
+                        id="description"
+                    /><br />
+                    <label for="result">Result:</label>
+                    <input type="text" name="result" id="result" /><br />
+                    <label for="image">Image:</label>
+                    <input type="text" name="image" id="image" /><br />
+                    <label for="url">URL:</label>
+                    <input type="text" name="url" id="url" /><br />
+                    <label for="agents">Agents:</label>
+                    <select id="agents" name="agents" size="4" multiple>
+                        <% agents.forEach(element => { %>
+                        <option value="<%= element.name %>">
+                            <%= element.name %>
+                        </option>
+                        <% }) %>
+                    </select>
+                    <button type="submit" onclick="portfolioFeltolt()">
+                        Feldolgoz
+                    </button>
+                </form>
+            </div>
+            <div class="form" id="form-modosit">
+                <h1>Portfóliók módosítása</h1>
+                <form>
+                    <input type="hidden" name="mid" id="mid" />
+                    <label for="mtitle">Title:</label>
+                    <input type="text" name="mtitle" id="mtitle" /><br />
+                    <label for="mdescription">Description:</label>
+                    <input
+                        type="text"
+                        name="mdescription"
+                        id="mdescription"
+                    /><br />
+                    <label for="mresult">Result:</label>
+                    <input type="text" name="mresult" id="mresult" /><br />
+                    <label for="mimage">Image:</label>
+                    <input type="text" name="mimage" id="mimage" /><br />
+                    <label for="murl">URL:</label>
+                    <input type="text" name="murl" id="murl" /><br />
+                    <label for="magents">Agents:</label>
+                    <select id="magents" name="magents" size="4" multiple>
+                        <% agents.forEach(element => { %>
+                        <option value="<%= element.name %>">
+                            <%= element.name %>
+                        </option>
+                        <% }) %>
+                    </select>
+                    <button type="submit" onclick="portfolioModosit()">
+                        Feldolgoz
+                    </button>
+                </form>
+            </div>
+        </div>
+        <h1>Kész Portfóliók</h1>
+        <% portfolios.forEach(element => { %>
+        <ol>
+            <li><%= element.title %></li>
+            <li><%= element.description %></li>
+            <li><%= element.result %></li>
+            <li><%= element.image %></li>
+            <li><%= element.url %></li>
+            <ul>
+                <% element.agent.forEach(elem => { %>
+                <li><%= elem.toString().split("'")[1] %></li>
+                <% }) %>
+            </ul>
+            <button onclick="portfolioTorol('<%= element._id %>')">
+                Töröl
+            </button>
+            <button onclick="pmodosit('<%= element._id %>')">Módosít</button>
+        </ol>
+        <% }) %>
+        <script src="./scripts/elso.js"></script>
+        <script>
+            let pmodosit = (id) => {
+                try {
+                    let formModosit = document.getElementById('form-modosit');
+                    formModosit.style.display = 'block';
+
+                    const adat = '<%- JSON.stringify(portfolios) %>';
+                    const portfolios = JSON.parse(adat);
+                    console.log(portfolios);
+
+                    portfolios.forEach((element) => {
+                        if (element._id == id) {
+                            let mid = document.getElementById('mid');
+                            mid.value = element._id;
+                            let mtitle = document.getElementById('mtitle');
+                            mtitle.value = element.title;
+                            let mdescription =
+                                document.getElementById('mdescription');
+                            mdescription.value = element.description;
+                            let mresult = document.getElementById('mresult');
+                            mresult.value = element.result;
+                            let mimage = document.getElementById('mimage');
+                            mimage.value = element.image;
+                            let murl = document.getElementById('murl');
+                            murl.value = element.url;
+                        }
+                    });
+                } catch (error) {
+                    console.log(error.message);
+                }
+            };
+        </script>
+    </body>
+</html>

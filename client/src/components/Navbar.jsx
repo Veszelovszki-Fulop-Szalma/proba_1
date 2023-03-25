@@ -4,15 +4,22 @@ import { useSelector, useDispatch } from 'react-redux';
 import { valt } from '../redux/userSlice';
 
 const Navbar = () => {
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    const rendeles = localStorage.getItem('rendeles');
+
     const userValue = useSelector((state) => state.user.userValue);
-    const isLoggedIn = userValue.isLoggedIn;
+
     console.log(userValue);
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
     const handleLogout = () => {
+        localStorage.removeItem('isLoggedIn');
+        localStorage.removeItem('username');
+        localStorage.removeItem('portfolio');
+        localStorage.removeItem('rendeles');
         dispatch(valt());
-        navigate('/');
+        navigate('/Belepes');
     };
 
     return (
@@ -32,7 +39,15 @@ const Navbar = () => {
                         <>
                             <Link to="/Portfolio">Portfoliók</Link>
                             <p className="igen">|</p>
-                            <button onClick={handleLogout} style={{fontSize: '16px'}}>Kilépés</button>
+                            <Link to="/Kosar">Vásárlói kosár</Link>
+                            <Link to="/Rendeles">Rendelések</Link>
+                            <p className="igen">|</p>
+                            <button
+                                onClick={handleLogout}
+                                style={{ fontSize: '16px' }}
+                            >
+                                Kilépés
+                            </button>
                         </>
                     ) : (
                         <>
