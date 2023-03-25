@@ -19,6 +19,7 @@ router.get('/', async (req, res) => {
 router.get('/rendelesek', async (req, res) => {
     try {
         const rendelesek = await Cart.find()
+            .sort({ createdAt: 'desc' })
             .populate('portfolio')
             .populate('agent');
         res.status(200).json(rendelesek);
