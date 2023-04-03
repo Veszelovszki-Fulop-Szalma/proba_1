@@ -39,25 +39,23 @@ const Kosar = () => {
     };
 
     return (
-        <div className="kosar-container">
-            <h1>Hello {username}!</h1>
-            <h4>{portfJ.title}</h4>
-            <p>{portfJ.description}</p>
-            <p>{portfJ.result}</p>
-            <img src={portfJ.image} alt="kép" />
-            <h2>Ügynökök</h2>
-            <ul>
-                {portfJ.agent.map((elem) => (
-                    <li key={elem._id}>
-                        <p>Név: {elem.name}</p>
-                        <img src={elem.image} alt="kép" />
-                        <button onClick={() => elkuld(elem._id)}>
-                            Kiválaszt
-                        </button>
-                    </li>
-                ))}
-            </ul>
-        </div>
+      <div className="kosar-container">
+        <h1 className="sorh1">Hello {username}!</h1>
+        <h4>{portfJ.title}</h4>
+        <p className="ppp">{portfJ.description}</p>
+        <p className="ppp">{portfJ.result}</p>
+        <img src={portfJ.image} alt="kép" />
+        <h2>Ügynökök</h2>
+        <ul className='ulke'>
+          {portfJ.agent.map((elem) => (
+            <li className='like' key={elem._id}>
+              <p className="ppp">Név:  {elem.name}</p>
+              <img className='meretes' src={elem.image} alt="kép" />
+              <button className='kival' onClick={() => elkuld(elem._id)}>Kiválaszt</button>
+            </li>
+          ))}
+        </ul>
+      </div>
     );
 };
 
