@@ -14,10 +14,13 @@ export const cartSlice = createSlice({
         feltolt: (state, action) => {
             state.cartValue.portfolio = action.payload.portfolio;
         },
+        toroltTomb: (state, action) => {
+            state.cartValue.portfolio = [];
+        }
     },
 });
 
 // Action creators are generated for each case reducer function
-export const { feltolt } = cartSlice.actions;
+export const { feltolt, toroltTomb } = cartSlice.actions;
 
 export default cartSlice.reducer;

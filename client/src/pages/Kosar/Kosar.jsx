@@ -1,5 +1,6 @@
 import './Kosar.css';
 import { useNavigate } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Kosar = () => {
     const username = localStorage.getItem('username');
@@ -57,6 +58,10 @@ const Kosar = () => {
             </li>
           ))}
         </ul>
+        <div className='jobrakoszi'>
+          <Link className='visszakos' to="/Portfolio">Vissza</Link>
+        </div>
+        
       </div>
     );
 };
