@@ -1,12 +1,13 @@
 import React from "react";
 import Header3 from "../../components/Header3";
+import kepemkrip from "../Kripto/kripto.png";
 
 const Kripto = () => {
   return (
     <div>
       <Header3 />
       <div className="container">
-        <h1>A Kripto valuta</h1>
+        <h1 className="szurke-hatter">A Kripto valuta</h1>
         <p>
           A kriptovaluták digitális pénzek, amelyek kódolás segítségével jönnek
           létre és átvitelre kerülnek a blockchain technológia révén. Az egyik
@@ -32,6 +33,9 @@ const Kripto = () => {
           saját pénzügyi céljaiknak és risk tolerance-juknak, mielőtt
           befektetnek.
         </p>
+        <div style={{textAlign:"center", margin:"50px"}}>
+          <img  src={kepemkrip} alt="Kriptovaluta" />
+        </div>
       </div>
     </div>
   );
