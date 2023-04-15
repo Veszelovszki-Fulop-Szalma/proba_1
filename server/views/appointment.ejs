@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./css/stilus.css" />
-        <title>Rendelések</title>
+        <title>Időpontfoglalások</title>
     </head>
     <body>
         <nav>
@@ -16,13 +16,14 @@
             <li><a href="/cart">Kosár</a></li>
             <li><a href="/appointment">Időpontok</a></li>
         </nav>
-        <h1>Rendelések</h1>
-        <% rendelesek.forEach(element => { %>
+        <h1>Foglalások</h1>
+        <% appointments.forEach(element => { %>
         <ol>
             <li><%= element.username %></li>
-            <li><%= element.portfolio.toString().split("'")[1] %></li>
+            <li><%= element.time %></li>
             <li><%= element.agent.toString().split("'")[1] %></li>
-            <button onclick="rendelesTorol('<%= element._id %>')">Töröl</button>
+            <li><%= element.portfolio.toString().split("'")[1] %></li>
+            <button onclick="foglalasTorol('<%= element._id %>')">Töröl</button>
         </ol>
         <% }) %>
         <script src="./scripts/elso.js"></script>

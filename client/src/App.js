@@ -32,7 +32,7 @@ function App() {
                     <Route path="/Portfolio" element={<Portfolio />} />
                     <Route path="/Kosar/:id" element={<Kosar />} />
                     <Route path="/Rendeles" element={<Rendeles />} />
-                    <Route path="/Foglalas" element={<Foglalas />} />
+                    <Route path="/Foglalas/:id" element={<Foglalas />} />
                 </Routes>
                 <Footer />
             </BrowserRouter>

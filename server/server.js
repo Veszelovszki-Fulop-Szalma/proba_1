@@ -13,6 +13,7 @@ const userRoutes = require('./routes/userRoutes');
 const portfolioRoutes = require('./routes/portfolioRoutes');
 const agentRoutes = require('./routes/agentRoutes');
 const cartRoutes = require('./routes/cartRoutes');
+const appointmentRoutes = require('./routes/appointmentRoutes');
 const adatbazisCsatlakozas = require('./middlewares/dbConnection');
 
 // Szerver létrehozása, beállítása
@@ -36,6 +37,7 @@ app.use('/user', userRoutes);
 app.use('/portfolio', portfolioRoutes);
 app.use('/agent', agentRoutes);
 app.use('/cart', cartRoutes);
+app.use('/appointment', appointmentRoutes);
 
 app.all('*', (req, res) => {
     res.status(404);
