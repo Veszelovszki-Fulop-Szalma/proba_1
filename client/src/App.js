@@ -14,6 +14,7 @@ import './App.css';
 import ScrollToTop from './components/ScrollToTop';
 import Kosar from './pages/Kosar/Kosar';
 import Rendeles from './pages/Rendeles/Rendeles';
+import Foglalas from './pages/Foglalas/foglalas';
 
 function App() {
     return (
@@ -31,6 +32,7 @@ function App() {
                     <Route path="/Portfolio" element={<Portfolio />} />
                     <Route path="/Kosar/:id" element={<Kosar />} />
                     <Route path="/Rendeles" element={<Rendeles />} />
+                    <Route path="/Foglalas" element={<Foglalas />} />
                 </Routes>
                 <Footer />
             </BrowserRouter>

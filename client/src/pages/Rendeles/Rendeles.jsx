@@ -2,13 +2,12 @@ import React, { useEffect, useState } from "react";
 import "./Rendeles.css";
 import { useDispatch } from "react-redux";
 import { feltolt } from "../../redux/cartSlice";
-import Calendar from "react-calendar";
+import { Link } from "react-router-dom";
 
 const Rendeles = () => {
   const username = localStorage.getItem("username");
   const [orders, setOrders] = useState([]);
   const dispatch = useDispatch();
-  const [value, onChange] = useState(new Date());
 
   useEffect(() => {
     const leker = async () => {
@@ -62,14 +61,10 @@ const Rendeles = () => {
           <img src={elem.portfolio.image} alt="kép" />
           <p>{elem.agent.name}</p>
           <img src={elem.agent.image} alt="kép" />
-          <button onClick={() => torol(elem._id)}>Törlés</button>
+          <button className="igenn" onClick={() => torol(elem._id)}>Törlés</button>
           <br />
           <br />
-          <div>
-            <Calendar onChange={onChange} value={value} />
-          </div>
-          <br />
-          <button>Időpont foglalás</button>
+          <Link className="igenn" to="/Foglalas">Időpontfoglaló</Link>
         </div>
       ))}
     </div>
