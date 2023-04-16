@@ -50,7 +50,7 @@ const Kosar = () => {
         <ul className="ulke">
           {portfJ.agent.map((elem) => (
             <li className="like" key={elem._id}>
-              <p className="ppp">Név: {elem.name}</p>
+              <p className="ppp">{elem.name}</p>
               <img className="imgkosar" src={elem.image} alt="kép" />
               <button className="kival" onClick={() => elkuld(elem._id)}>
                 Kiválaszt

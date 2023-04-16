@@ -53,6 +53,7 @@ const Foglalas = () => {
     };
 
     return (
+    <div className='oldalam'>
         <Modal show={show}>
             <span className="close" onClick={handleShow}>
                 &times;
@@ -60,7 +61,7 @@ const Foglalas = () => {
             <h2>Időpont foglalása</h2>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
-                    <label htmlFor="date">Válassza ki az időpontot:</label>
+                    <label className='labelel' htmlFor="date">Válassza ki az időpontot:  </label>
                     <input
                         type="datetime-local"
                         id="date"
@@ -76,6 +77,7 @@ const Foglalas = () => {
                 </button>
             </form>
         </Modal>
+    </div>
     );
 };
 
