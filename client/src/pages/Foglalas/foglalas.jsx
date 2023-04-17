@@ -16,7 +16,7 @@ const Foglalas = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('Selected date: ', selectedDate);
-        window.alert('Sikeres időpontfoglalás!');
+        window.alert('Sikeres időpontfoglalás! A továbbbiakban ügynökünk emailben keresi önt! Köszönjük bizalmát!');
 
         const elkuld = async () => {
             try {
@@ -59,7 +59,7 @@ const Foglalas = () => {
                 &times;
             </span>
             <h2>Időpont foglalása</h2>
-            <form onSubmit={handleSubmit}>
+            <form className='former' onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label className='labelel' htmlFor="date">Válassza ki az időpontot:  </label>
                     <input
