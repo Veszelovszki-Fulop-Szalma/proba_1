@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  min-height: 900px;
 }
 
 .rendeles {
@@ -35,4 +36,13 @@
   font-size: 20px;
   color: #555;
   margin: 20px;
+}
+
+.igenn{
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
 }

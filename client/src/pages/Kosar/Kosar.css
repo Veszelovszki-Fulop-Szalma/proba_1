@@ -73,10 +73,12 @@ h2 {
 }
 
 .kival{
-    background-color: #f1f1f1;
-    color: black;
-    font-size: larger;
-    font-weight:  bold;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
 .meretes{

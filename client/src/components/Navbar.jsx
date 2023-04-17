@@ -31,10 +31,10 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="left">
-          <Link to="/">Home</Link>
+          <Link to="/">Kezdőlap</Link>
           <Link to="/Kotveny">Kötvény</Link>
           <Link to="/Reszveny">Részvény</Link>
-          <Link to="/Kripto">Kripto</Link>
+          <Link to="/Kripto">Kriptovaluta</Link>
           {isLoggedIn ? (
             <>
               <Link to="/Portfolio">Portfoliók</Link>

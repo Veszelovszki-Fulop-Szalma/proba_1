@@ -163,3 +163,20 @@ let rendelesTorol = async (id) => {
         console.log(error.message);
     }
 };
+
+let foglalasTorol = async (id) => {
+    try {
+        const response = await fetch('/appointment/torol', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ id }),
+        });
+
+        const adat = await response.json();
+        console.log(adat);
+    } catch (error) {
+        console.log(error.message);
+    }
+};
