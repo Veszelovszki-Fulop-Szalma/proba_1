@@ -5,7 +5,6 @@ import { valt } from "../redux/userSlice";
 
 const Navbar = () => {
   const isLoggedIn = localStorage.getItem("isLoggedIn");
-  const rendeles = localStorage.getItem("rendeles");
 
   const userValue = useSelector((state) => state.user.userValue);
 
